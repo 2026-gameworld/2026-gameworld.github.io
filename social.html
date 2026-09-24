@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GameWorld Socials</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* =====================================================
+           SOCIAL PAGE
+        ===================================================== */
+
+        .social-page {
+            min-height: calc(100vh - 160px);
+            padding: 70px 20px;
+        }
+
+        .social-container {
+            width: min(1100px, 100%);
+            margin: auto;
+        }
+
+        .social-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .social-header h1 {
+            color: white;
+            font-family: monospace;
+            font-size: clamp(35px, 7vw, 65px);
+            margin: 0 0 12px;
+        }
+
+        .social-header p {
+            color: #8fa7b5;
+            font-family: monospace;
+            max-width: 650px;
+            margin: auto;
+            line-height: 1.7;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .social-card {
+            background:
+                linear-gradient(
+                    145deg,
+                    #0b1825,
+                    #050c14
+                );
+            border: 1px solid #294354;
+            padding: 28px;
+            text-align: center;
+            font-family: monospace;
+            color: white;
+            transition: 0.2s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .social-card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            height: 3px;
+            background: #00e5ff;
+            opacity: 0;
+            transition: 0.2s;
+        }
+
+        .social-card:hover {
+            transform: translateY(-5px);
+            border-color: #00e5ff;
+            box-shadow:
+                0 0 25px rgba(0, 229, 255, 0.15);
+        }
+
+        .social-card:hover::before {
+            opacity: 1;
+        }
+
+        .social-icon {
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+        .social-card h2 {
+            color: white;
+            margin: 0 0 10px;
+            font-size: 20px;
+        }
+
+        .social-card p {
+            color: #7f96a5;
+            font-size: 11px;
+            line-height: 1.6;
+            min-height: 35px;
+        }
+
+        .social-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 11px 20px;
+            background: #00e5ff;
+            color: #031018;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: monospace;
+            transition: 0.2s;
+        }
+
+        .social-link:hover {
+            background: white;
+        }
+
+        .social-link.disabled {
+            background: #172634;
+            color: #708491;
+            cursor: default;
+            pointer-events: none;
+        }
+
+        .social-note {
+            margin-top: 35px;
+            padding: 15px;
+            border: 1px solid #203746;
+            background: rgba(0, 229, 255, 0.03);
+            color: #728997;
+            text-align: center;
+            font-family: monospace;
+            font-size: 11px;
+        }
+
+        @media (max-width: 850px) {
+            .social-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 550px) {
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-page {
+                padding: 45px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <a href="index.html" class="logo">
+            GAMEWORLD
+        </a>
+
+        <nav class="nav">
+
+            <a href="index.html#home">
+                Home
+            </a>
+
+            <a href="index.html#games">
+                Games
+            </a>
+
+            <a href="index.html#news">
+                News
+            </a>
+
+            <a href="index.html#community">
+                Community
+            </a>
+
+            <a href="social.html">
+                Social
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <!-- SOCIAL PAGE -->
+    <main class="social-page">
+
+        <div class="social-container">
+
+            <div class="social-header">
+
+                <div class="status">
+                    ● GAMEWORLD SOCIAL
+                </div>
+
+                <h1>
+                    OUR SOCIALS
+                </h1>
+
+                <p>
+                    Follow GameWorld across our social platforms
+                    to stay updated with games, announcements,
+                    events and community news.
+                </p>
+
+            </div>
+
+
+            <div class="social-grid">
+
+
+                <!-- DISCORD -->
+                <div class="social-card">
+
+                    <div class="social-icon">
+                        💬
+                    </div>
+
+                    <h2>
+                        Discord
+                    </h2>
+
+                    <p>
+                        Join the GameWorld community,
+                        chat with other players and get updates.
+                    </p>
+
+                    <a
+                        href="https://discord.gg/JVSktFN2E4"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="social-link"
+                    >
+                        JOIN DISCORD
+                    </a>
+
+                </div>
+
+
+                <!-- YOUTUBE -->
+                <div class="social-card">
+
+                    <div class="social-icon">
+                        ▶️
+                    </div>
+
+                    <h2>
+                        YouTube
+                    </h2>
+
+                    <p>
+                        GameWorld videos, trailers,
+                        updates and gameplay.
+                    </p>
+
+                    <a
+    href="https://www.youtube.com/@2026-game-world"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-link"
+>
+    VISIT YOUTUBE
+</a>
+                </div>
+
+
+                <!-- TIKTOK -->
+                <div class="social-card">
+
+                    <div class="social-icon">
+                        🎵
+                    </div>
+
+                    <h2>
+                        TikTok
+                    </h2>
+
+                    <p>
+                        Short GameWorld clips,
+                        funny moments and updates.
+                    </p>
+
+                    <span class="social-link disabled">
+                        COMING SOON
+                    </span>
+
+                </div>
+
+
+                <!-- INSTAGRAM -->
+                <div class="social-card">
+
+                    <div class="social-icon">
+                        📸
+                    </div>
+
+                    <h2>
+                        Instagram
+                    </h2>
+
+                    <p>
+                        GameWorld photos, announcements
+                        and behind-the-scenes posts.
+                    </p>
+
+                    <span class="social-link disabled">
+                        COMING SOON
+                    </span>
+
+                </div>
+
+
+                <!-- X -->
+                <div class="social-card">
+
+                    <div class="social-icon">
+                        𝕏
+                    </div>
+
+                    <h2>
+                        X
+                    </h2>
+
+                    <p>
+                        GameWorld announcements,
+                        news and quick updates.
+                    </p>
+
+                    <a
+    href="https://x.com/Simoon_2026"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-link"
+>
+    VISIT X
+</a>
+                    
+
+                </div>
+
+
+                <!-- ROBLOX -->
+                <div class="social-card">
+
+                    <div class="social-icon">
+                        🎮
+                    </div>
+
+                    <h2>
+                        Roblox
+                    </h2>
+
+                    <p>
+                        Play GameWorld experiences
+                        and follow our Roblox projects.
+                    </p>
+
+                    <a
+    href="https://www.roblox.com/users/11713290452/profile"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="social-link"
+>
+    VIEW ROBLOX
+</a>
+
+                </div>
+
+            </div>
+
+
+            <div class="social-note">
+                More official GameWorld social accounts will be
+                added here as they become available.
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+
+        <div class="footer-logo">
+            GAMEWORLD
+        </div>
+
+        <p>
+            © 2026 GameWorld. All rights reserved.
+        </p>
+
+        <div class="footer-links">
+
+            <a href="index.html">
+                Home
+            </a>
+
+            <a href="index.html#games">
+                Games
+            </a>
+
+            <a href="index.html#community">
+                Community
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
