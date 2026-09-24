@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#08131f"/>
+      <stop offset="100%" stop-color="#02070c"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#00e5ff"/>
+      <stop offset="100%" stop-color="#008cff"/>
+    </linearGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="4" flood-color="#00e5ff" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <rect x="4" y="4" width="92" height="92" rx="22" fill="url(#bg)"/>
+  <path d="M29 40 C24 40 20 45 18 56 C16 67 19 76 25 77 C30 78 34 71 37 66 L63 66 C66 71 70 78 75 77 C81 76 84 67 82 56 C80 45 76 40 71 40 C66 40 62 43 59 46 L41 46 C38 43 34 40 29 40Z" fill="url(#glow)" filter="url(#shadow)"/>
+  <rect x="28" y="50" width="5" height="17" rx="2" fill="#06111b"/>
+  <rect x="22" y="56" width="17" height="5" rx="2" fill="#06111b"/>
+  <circle cx="68" cy="54" r="4" fill="#06111b"/>
+  <circle cx="76" cy="61" r="4" fill="#06111b"/>
+  <rect x="44" y="52" width="12" height="4" rx="2" fill="#06111b" opacity="0.8"/>
+  <path d="M27 27 L73 27" stroke="#00e5ff" stroke-width="3" stroke-linecap="round" opacity="0.8"/>
+</svg>
